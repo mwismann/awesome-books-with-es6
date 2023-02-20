@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  letter-spacing: 0.01rem;
+
+  --brand-color-main: rgb(98, 130, 130);
+  --brand-color-secondary: rgb(78, 180, 150);
+  --bg-color-main: rgb(65, 35, 35);
+}
+
+body {
+  background-color: var(--bg-color-main);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --------- Header and Navbar ----------- */
+header {
+  background-color: rgba(0, 0, 0, 0.88);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+li a {
+  color: var(--brand-color-main);
+}
+
+.logo-container a {
+  font-weight: bolder;
+  text-shadow: 0 3px rgba(98, 130, 130, 0.556);
+}
+
+li a:hover {
+  color: var(--brand-color-secondary);
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(225, 225, 225, 0.5);
+  cursor: pointer;
+}
+
+li a:active {
+  color: white;
+}
+
+.logo-container {
+  background-color: var(--bg-color-main);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.logo-container:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+li:nth-child(2) a {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding: 0 1rem;
+}
+
+.logo-container:hover a {
+  color: var(--bg-color-main);
+}
+
+/* ----- Aside Time ---------- */
+aside {
+  padding: 1rem 2rem;
+  text-align: end;
+}
+
+/* ----- main content -------- */
+
+main {
+  width: 100%;
+  min-height: 82.8vh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 5px rgba(98, 130, 130, 0.556);
+}
+
+#books-grid {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+}
+
+#books-grid.active {
+  display: block;
+}
+
+.book-item {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.88);
+}
+
+.book-item:hover {
+  box-shadow: 0 0 8px 4px white;
+}
+
+.book-item:nth-child(1) {
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+}
+
+.book-item:nth-last-child(1) {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.book-item:nth-child(2n) {
+  background-color: rgb(198, 178, 178);
+}
+
+.item-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-meta h2,
+.item-meta span,
+.item-meta p {
+  font-size: 1rem;
+}
+
+.book-item:nth-child(2n) > .item-meta > h2,
+.book-item:nth-child(2n) > .item-meta > span,
+.book-item:nth-child(2n) > .item-meta > p {
+  color: black;
+}
+
+.btn {
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--brand-color-main);
+  box-shadow: 3px 3px 2px 0 rgba(98, 130, 130, 0.556);
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--brand-color-secondary);
+}
+
+#divider {
+  width: 15%;
+  border-top: 3px solid black;
+  border-radius: 50%;
+}
+
+/* --------- Form ------------ */
+form {
+  padding-top: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 50%;
+}
+
+form.active {
+  display: flex;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  text-shadow: 0 3px rgba(98, 130, 130, 0.556);
+}
+
+.form-group {
+  width: 100%;
+}
+
+input {
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  color: var(--brand-color-main);
+  border-radius: 0.25rem;
+}
+
+form > button {
+  align-self: flex-end;
+}
+
+/* --------- Contact Section ---------- */
+#contact-section {
+  width: 70%;
+  padding-top: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+#contact-section.active {
+  display: flex;
+}
+
+#contact-section ul {
+  padding-left: 5%;
+  margin-top: 1rem;
+}
+
+/* --------- Footer ----------------- */
+footer {
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.88);
+}
