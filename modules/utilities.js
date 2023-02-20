@@ -1,3 +1,8 @@
+import { DateTime } from './luxon.js';
+
+// ------------- luxon time var --------------------
+const now = DateTime.now();
+
 // ------------- main and nav variables ------------
 const navLinks = document.querySelectorAll('.nav-link');
 const headline = document.querySelector('h1');
@@ -13,6 +18,8 @@ const newBookAuthor = document.getElementById('new-author');
 const addBookBtn = document.getElementById('add-book');
 
 // ------------- functions -------------------------
+const displayTime = () => now;
+
 const renderContent = (currSection) => {
   sections.forEach((section) => section.classList.remove('active'));
   document.querySelector(`${currSection}`).classList.add('active');
@@ -28,5 +35,6 @@ const renderContent = (currSection) => {
 export {
   navLinks, headline, sections,
   booksGrid, form, newBookTitle,
-  newBookAuthor, addBookBtn, renderContent,
+  newBookAuthor, addBookBtn, displayTime,
+  renderContent,
 };
