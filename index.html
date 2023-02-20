@@ -8,7 +8,50 @@
     <title>Awesome Books</title>
 </head>
 <body>
+    <header>
+        <div class="logo-container">
+            <a href="">Awesome Books</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="nav-link" data-link="#books-grid">Books</a></li>
+                <li><a href="#" class="nav-link" data-link="form">Add New</a></li>
+                <li><a href="#" class="nav-link" data-link="#contact-section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <main>
+        <h1>All awesome books</h1>
+    
+        <section id="books-grid" class="section active">
+        </section>
+    
+        <form action="/" class="section">
+            <div class="form-group">
+                <input type="text" name="title" id="new-title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <input type="text" name="author" id="new-author" placeholder="Author">
+            </div>
+            <button class="btn" id="add-book">Add</button>
+        </form>
+    
+        <section id="contact-section" class="section">
+            <p>Do you have any other questions or you just wan to say "Hello"?</p>
+            <p>You can reach out to us!</p>
+            <ul>
+                <li>Our email: email@email.com</li>
+                <li>Our phone number: 0043599841651</li>
+                <li>Our address: Streetname 22, 84503 City, Country</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <span>Copyright</span>
+        <span>Awesome Books Co., All Rights Reserved</span>
+    </footer>
 
     <script src="index.js"></script>
 </body>
