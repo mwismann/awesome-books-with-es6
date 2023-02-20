@@ -76,6 +76,14 @@ li:nth-child(2) a {
   color: var(--bg-color-main);
 }
 
+/* ----- Aside Time ---------- */
+aside {
+  padding: 1rem 2rem;
+  text-align: end;
+}
+
+/* ----- main content -------- */
+
 main {
   width: 100%;
   min-height: 82.8vh;

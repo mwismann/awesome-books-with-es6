@@ -1,7 +1,8 @@
 import { DateTime } from './luxon.js';
 
 // ------------- luxon time var --------------------
-const now = DateTime.now();
+const dt = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+const displayedTime = document.querySelector('aside > span');
 
 // ------------- main and nav variables ------------
 const navLinks = document.querySelectorAll('.nav-link');
@@ -18,7 +19,7 @@ const newBookAuthor = document.getElementById('new-author');
 const addBookBtn = document.getElementById('add-book');
 
 // ------------- functions -------------------------
-const displayTime = () => now;
+const displayTime = () => { displayedTime.textContent = `${dt}`; };
 
 const renderContent = (currSection) => {
   sections.forEach((section) => section.classList.remove('active'));
